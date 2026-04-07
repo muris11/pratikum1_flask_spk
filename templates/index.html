@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPK - Pemilihan Laptop Terbaik</title>
+</head>
+<body>
+  <h1>
+    Sistem Pendukung Keputusan - Pemilihan Laptop Terbaik
+  </h1>
+  <p>Studi Kasus: Membantu mahasiswa memilih laptop yang optimal berdasarkan kriteria harga, spesifikasi, dan portabilitas.</p>
+
+  <h2>Data Kriteria (C1 - C6)</h2>
+  {{ kriteria | safe }}
+
+  <h2>Data Alternatif Laptop (A1 - A5)</h2>
+  {{ alternatif | safe }}
+
+  <h3>Upload Data Baru</h3>
+  <form method="POST" action="/upload" enctype="multipart/form-data">
+    <label>File Kriteria (CSV):</label><br>
+    <input type="file" name="kriteria" accept=".csv"><br><br>
+    <label>File Alternatif (CSV):</label><br>
+    <input type="file" name="alternatif" accept=".csv"><br><br>
+    <button type="submit">Upload Data</button>
+  </form>
+
+  <p>Total Kriteria: {{ info_kriteria.baris }} kriteria</p>
+  <p>Total Alternatif: {{ info_alternatif.baris }} laptop</p>
+
+</body>
+</html>

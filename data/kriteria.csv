@@ -1,0 +1,7 @@
+kode,nama,tipe,bobot
+C1,Harga,cost,5
+C2,RAM (GB),benefit,4
+C3,Storage (GB),benefit,4
+C4,Processor Score,benefit,5
+C5,Layar (inch),benefit,3
+C6,Berat (kg),cost,4
